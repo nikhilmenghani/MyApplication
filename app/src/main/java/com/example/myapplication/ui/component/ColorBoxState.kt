@@ -15,10 +15,11 @@ import kotlin.random.Random
 @Composable
 fun ColorBox(
     modifier: Modifier,
+    color : Color,
     updateColor: (Color) -> Unit
 ) {
     Box(modifier = modifier
-        .background(color = Color.Blue)
+        .background(color = color)
         .clickable {
             updateColor(
                 Color(
@@ -28,25 +29,25 @@ fun ColorBox(
                     1f
                 )
             )
-        }) {
-
-    }
+        })
 }
 
 @Composable
 fun ColorBoxMain() {
     Column(modifier = Modifier.fillMaxSize()) {
         val color = remember { mutableStateOf(Color.Yellow) }
+        val color2 = remember { mutableStateOf(Color.Red) }
         ColorBox(modifier = Modifier
             .weight(1f)
-            .fillMaxSize()) {
+            .fillMaxSize(),
+            color.value) {
+            color2.value = it
+        }
+        ColorBox(modifier = Modifier
+            .weight(1f)
+            .fillMaxSize(),
+            color2.value) {
             color.value = it
         }
-        Box(
-            modifier = Modifier
-                .background(color = color.value)
-                .weight(1f)
-                .fillMaxSize()
-        )
     }
 }

@@ -3,14 +3,10 @@ package com.example.myapplication
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.myapplication.ui.theme.MyApplicationTheme
+import com.example.myapplication.ui.component.TextStyling
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,23 +18,11 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun FirstApp() {
-    MyApplicationTheme {
-        // A surface container using the 'background' color from the theme
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = MaterialTheme.colors.background
-        ) {
-            Greeting("Android")
-        }
-    }
-}
-
-@Composable
 fun CurrentLearning() {
 //    LearningModifiers()
 //    LearningImageCard()
-    Greeting("Android")
+//    Greeting("Android")
+    TextStyling()
 }
 
 @Composable

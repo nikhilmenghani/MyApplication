@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.myapplication.ui.component.TextStyling
+import com.example.myapplication.ui.component.ColorBoxMain
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,8 @@ fun CurrentLearning() {
 //    LearningModifiers()
 //    LearningImageCard()
 //    Greeting("Android")
-    TextStyling()
+//    TextStyling()
+    ColorBoxMain()
 }
 
 @Composable

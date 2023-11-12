@@ -10,6 +10,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.example.myapplication.ui.theme.Purple200
+import com.example.myapplication.ui.theme.Teal200
 import kotlin.random.Random
 
 @Composable
@@ -35,8 +37,8 @@ fun ColorBox(
 @Composable
 fun ColorBoxMain() {
     Column(modifier = Modifier.fillMaxSize()) {
-        val color = remember { mutableStateOf(Color.Yellow) }
-        val color2 = remember { mutableStateOf(Color.Red) }
+        val color = remember { mutableStateOf(Purple200) }
+        val color2 = remember { mutableStateOf(Teal200) }
         ColorBox(modifier = Modifier
             .weight(1f)
             .fillMaxSize(),
